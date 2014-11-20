@@ -94,3 +94,37 @@ var result = Maybe.new(3).chain(function(x) {
 
 console.log(result) // Nothing
 ```
+
+Builder:
+
+```javascript
+var mkVehicle = Class(Vehicle)
+
+var Car = mkVehicle({
+  new: function() {...}
+})
+
+var Boat = mkVehicle({
+  new: function() {...}
+})
+
+var Bike = mkVehicle({
+  new: function() {...}
+})
+```
+
+Composable:
+
+```javascript
+var cars = ['Honda', 'Subaru', 'Ford'].map(Car.new)
+
+cars.every(Car.isPrototypeOf.bind(Car))
+
+var apply = function(f) {
+  return function() {
+    return f.apply(null, arguments)
+  }
+}
+
+var people = [['James', 25], ['Mike', 32]].map(apply(Person.new))
+```
