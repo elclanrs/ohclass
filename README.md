@@ -131,7 +131,7 @@ var people = [['James', 25], ['Mike', 32]].map(apply(Person.new))
 
 Mixins:
 
-```
+```javascript
 var Walkable = {
   walk: function() {
     return 'Walking...'
