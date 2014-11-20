@@ -1,0 +1,27 @@
+{
+  "author": "elclanrs",
+  "name": "ohclass",
+  "description": "Yet another JS class library",
+  "version": "1.0.0",
+  "main": "lib/ohclass.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elclanrs/ohclass.git"
+  },
+  "devDependencies": {
+    "coffeeify": "^0.7.0"
+  },
+  "scripts": {
+    "compile": "browserify src/ohclass.coffee -s ohclass -t coffeeify | uglifyjs -m -c --comments -o lib/ohclass.js",
+    "test": "coffee test",
+    "prepublish": "npm test && npm run-script compile"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }],
+  "keywords": [
+    "class",
+    "oop"
+  ]
+}
