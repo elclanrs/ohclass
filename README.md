@@ -118,7 +118,7 @@ Composable:
 ```javascript
 var cars = ['Honda', 'Subaru', 'Ford'].map(Car.new)
 
-cars.every(Car.isPrototypeOf.bind(Car))
+var isAllCars = cars.every(Car.isPrototypeOf.bind(Car))
 
 var apply = function(f) {
   return function() {
