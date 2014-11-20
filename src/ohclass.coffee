@@ -2,7 +2,7 @@
 ohclass
 https://github.com/elclanrs/ohclass
 @author elclanrs
-#@license MIT
+@license MIT
 ###
 
 λ = (f) -> (as...) ->
