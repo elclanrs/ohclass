@@ -29,5 +29,5 @@ module.exports = λ (parent, obj) ->
       ctor.isPrototypeOf this
   if parent
     return extend child, obj, super: ->
-      extend this, parent.new.apply this, arguments
+      extend this, parent.new arguments...
   obj
